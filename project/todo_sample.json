@@ -1,130 +1,130 @@
 [
-    {
-        "title": "Buy groceries",
-        "description": "Milk, bread, eggs, and some fruits"
-      },
-      {
-        "title": "Finish report",
-        "description": "Due on Monday. Need to finalize data analysis."
-      },
-      {
-        "title": "Clean the apartment",
-        "description": "Vacuuming, dusting, and mopping floors."
-      },
-      {
-        "title": "Call mom",
-        "description": "Just to catch up and see how she's doing."
-      },
-      {
-        "title": "Workout",
-        "description": "30 minutes of cardio and some strength training."
-      },
-      {
-        "title": "Pay phone bill",
-        "description": "Due by the end of the month."
-      },
-      {
-        "title": "Water the plants",
-        "description": "Don't forget the ones in the back room!"
-      },
-      {
-        "title": "Schedule doctor's appointment",
-        "description": "Annual check-up."
-      },
-      {
-        "title": "Organize bookshelf",
-        "description": "Group books by genre and alphabetize within each section."
-      },
-      {
-        "title": "Research weekend trip",
-        "description": "Looking for a relaxing getaway."
-      },
-      {
-        "title": "Change air filters",
-        "description": "Living room, bedroom, and upstairs hallway."
-      },
-      {
-        "title": "Wash car",
-        "description": "Hand wash recommended for a better finish."
-      },
-      {
-        "title": "Return library books",
-        "description": "Avoid late fees!"
-      },
-      {
-        "title": "Fold laundry",
-        "description": "Living in a mountain of clothes is not comfortable."
-      },
-      {
-        "title": "Fix leaky faucet",
-        "description": "Save water and prevent damage."
-      },
-      {
-        "title": "Learn a new recipe",
-        "description": "Expand your culinary skills."
-      },
-      {
-        "title": "Backup important computer files",
-        "description": "Be prepared for any unexpected data loss."
-      },
-      {
-        "title": "Declutter a drawer",
-        "description": "Start with a kitchen junk drawer or a sock drawer, for example."
-      },
-      {
-        "title": "Write a thank-you note",
-        "description": "Show appreciation for a recent gift or favor."
-      },
-      {
-        "title": "Practice a musical instrument",
-        "description": "Keep your skills sharp or learn a new piece."
-      },
-      {
-        "title": "Meditate",
-        "description": "Reduce stress and improve focus."
-      },
-      {
-        "title": "Read a book for pleasure",
-        "description": "Get lost in a good story."
-      },
-      {
-        "title": "Call a friend you haven't spoken to in a while",
-        "description": "Reconnect and catch up."
-      },
-      {
-        "title": "Clean out your email inbox",
-        "description": "Unsubscribe from unwanted emails and delete old messages."
-      },
-      {
-        "title": "Organize your digital photos",
-        "description": "Create folders and delete duplicates."
-      },
-      {
-        "title": "Learn a new word",
-        "description": "Expand your vocabulary."
-      },
-      {
-        "title": "Do some stretches or yoga",
-        "description": "Improve your flexibility and reduce muscle tension."
-      },
-      {
-        "title": "Plan your meals for the week",
-        "description": "Save time and money by avoiding impulse grocery shopping."
-      },
-      {
-        "title": "Volunteer your time",
-        "description": "Give back to your community."
-      },
-      {
-        "title": "Take a walk in nature",
-        "description": "Get some fresh air and sunshine."
-      },
-      {
-        "title": "Clean out your purse or backpack",
-        "description": "Get rid of old receipts, unused items, and crumbs."
-      },
-      {
-        "title": "Sharpen your pencils",
-        "description": "Be prepared for a sudden burst of creativity."
-      }
+  {
+    "title": "Buy groceries",
+    "description": "Milk, bread, eggs, and some fruits"
+  },
+  {
+    "title": "Finish report",
+    "description": "Due on Monday. Need to finalize data analysis."
+  },
+  {
+    "title": "Clean the apartment",
+    "description": "Vacuuming, dusting, and mopping floors."
+  },
+  {
+    "title": "Call mom",
+    "description": "Just to catch up and see how she's doing."
+  },
+  {
+    "title": "Workout",
+    "description": "30 minutes of cardio and some strength training."
+  },
+  {
+    "title": "Pay phone bill",
+    "description": "Due by the end of the month."
+  },
+  {
+    "title": "Water the plants",
+    "description": "Don't forget the ones in the back room!"
+  },
+  {
+    "title": "Schedule doctor's appointment",
+    "description": "Annual check-up."
+  },
+  {
+    "title": "Organize bookshelf",
+    "description": "Group books by genre and alphabetize within each section."
+  },
+  {
+    "title": "Research weekend trip",
+    "description": "Looking for a relaxing getaway."
+  },
+  {
+    "title": "Change air filters",
+    "description": "Living room, bedroom, and upstairs hallway."
+  },
+  {
+    "title": "Wash car",
+    "description": "Hand wash recommended for a better finish."
+  },
+  {
+    "title": "Return library books",
+    "description": "Avoid late fees!"
+  },
+  {
+    "title": "Fold laundry",
+    "description": "Living in a mountain of clothes is not comfortable."
+  },
+  {
+    "title": "Fix leaky faucet",
+    "description": "Save water and prevent damage."
+  },
+  {
+    "title": "Learn a new recipe",
+    "description": "Expand your culinary skills."
+  },
+  {
+    "title": "Backup important computer files",
+    "description": "Be prepared for any unexpected data loss."
+  },
+  {
+    "title": "Declutter a drawer",
+    "description": "Start with a kitchen junk drawer or a sock drawer, for example."
+  },
+  {
+    "title": "Write a thank-you note",
+    "description": "Show appreciation for a recent gift or favor."
+  },
+  {
+    "title": "Practice a musical instrument",
+    "description": "Keep your skills sharp or learn a new piece."
+  },
+  {
+    "title": "Meditate",
+    "description": "Reduce stress and improve focus."
+  },
+  {
+    "title": "Read a book for pleasure",
+    "description": "Get lost in a good story."
+  },
+  {
+    "title": "Call a friend you haven't spoken to in a while",
+    "description": "Reconnect and catch up."
+  },
+  {
+    "title": "Clean out your email inbox",
+    "description": "Unsubscribe from unwanted emails and delete old messages."
+  },
+  {
+    "title": "Organize your digital photos",
+    "description": "Create folders and delete duplicates."
+  },
+  {
+    "title": "Learn a new word",
+    "description": "Expand your vocabulary."
+  },
+  {
+    "title": "Do some stretches or yoga",
+    "description": "Improve your flexibility and reduce muscle tension."
+  },
+  {
+    "title": "Plan your meals for the week",
+    "description": "Save time and money by avoiding impulse grocery shopping."
+  },
+  {
+    "title": "Volunteer your time",
+    "description": "Give back to your community."
+  },
+  {
+    "title": "Take a walk in nature",
+    "description": "Get some fresh air and sunshine."
+  },
+  {
+    "title": "Clean out your purse or backpack",
+    "description": "Get rid of old receipts, unused items, and crumbs."
+  },
+  {
+    "title": "Sharpen your pencils",
+    "description": "Be prepared for a sudden burst of creativity."
+  }
 ]
