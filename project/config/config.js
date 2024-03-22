@@ -6,10 +6,9 @@ const config = {
     password: process.env.PG_PASSWORD,
     database: process.env.PG_DB,
     host: process.env.PG_HOST,
-    dialect: 'postgres'
+    dialect: 'postgres',
+    // logging: false
   }
 };
-
-// console.log(config);
 
 module.exports = config
