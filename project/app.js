@@ -5,13 +5,17 @@ const errorHandler = require("./middlewares/errorHandler.js")
 const port = 3000
 
 app.use(express.json());
-
 app.get('/', (req, res) => {
   res.send('Hello World!')
 })
 
 app.use(router);
 app.use(errorHandler);
-app.listen(port, () => {
-  console.log(`Example app listening on port ${port}`)
-})
+
+if(process.env.NODE_ENV != "test"){
+  app.listen(port, () => {
+    console.log(`Example app listening on port ${port}`)
+  })
+}
+
+module.exports = app;

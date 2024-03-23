@@ -1,12 +1,19 @@
 
 const {Todo} = require("../models");
 
+const DEFAULT_LIMIT = 10;
+const DEFAULT_PAGE = 1;
+
 class TodosController{
     static findAll = async (req, res, next) => {
         try{
-            const {limit, page} = req.body;
+
+            let {limit, page} = req.query;
+            limit = +limit || DEFAULT_LIMIT;
+            page = +page || DEFAULT_PAGE;
+
             const param = {
-                limit: limit,
+                limit: limit ,
                 offset: (page-1)*limit
             }
 
