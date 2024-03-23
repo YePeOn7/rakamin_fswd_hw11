@@ -1,0 +1,22 @@
+version: "3"
+
+networks:
+  app-net:
+  
+volumes:
+  pg_data:
+
+services:
+  postgres:
+    image: postgres
+    container_name: "pg"
+    environment:
+      POSTGRES_PASSWORD: "12345678"
+    networks:
+      - app-net
+    restart: always
+    ports:
+      - 11111:5432
+    volumes:
+      - pg_data:/var/lib/postgresql/data
+

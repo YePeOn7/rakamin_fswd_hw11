@@ -18,13 +18,13 @@ const config = {
     logging: false
   },
   docker: {
-    username: process.env.PG_USER,
-    password: process.env.PG_PASSWORD,
-    database: process.env.PG_DB,
-    host: process.env.PG_HOST,
+    username: process.env.DOCKER_PG_USER,
+    password: process.env.DOCKER_PG_PASSWORD,
+    database: process.env.DOCKER_PG_DB,
+    host: process.env.DOCKER_PG_HOST,
     dialect: 'postgres',
     // logging: false,
-    port: 11111
+    // port: 5433
   },
 };
 

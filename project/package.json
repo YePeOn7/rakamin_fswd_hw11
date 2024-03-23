@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "nodemon app.js",
     "test": "jest --detectOpenHandles --runInBand --forceExit",
-    "docker": "NODE_ENV=docker && export NODE_ENV && nodemon ./app.js"
+    "docker": "NODE_ENV=docker && export NODE_ENV && node ./app.js"
   },
   "keywords": [],
   "author": "",
