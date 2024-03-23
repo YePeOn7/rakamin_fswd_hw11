@@ -45,10 +45,14 @@ jobs:
       with:
         node-version: ${{ matrix.node-version }}
         cache: 'npm'
-    - run: npm ci
+    - name: Install Dependency
+      run: npm ci
       working-directory: project
-    - run: npm run build --if-present
+    
+    - name: Build
+      run: npm run build --if-present
       working-directory: project
+    
     - name: init DB
       working-directory: project
       run: |
