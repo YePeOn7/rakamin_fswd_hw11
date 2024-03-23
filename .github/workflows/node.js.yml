@@ -43,13 +43,12 @@ jobs:
     - name: Use Node.js ${{ matrix.node-version }}
       uses: actions/setup-node@v3
       with:
+        path: project
         node-version: ${{ matrix.node-version }}
         cache: 'npm'
     - name: Install Dependency
-      run: |
-        cd project
-        npm ci
-      # working-directory: project
+      run: npm ci
+      working-directory: project
     
     # - name: Build
     #   run: npm run build --if-present
@@ -58,14 +57,12 @@ jobs:
     - name: init DB
       working-directory: project
       run: |
-        cd project
         npx sequelize-cli db:create --env test
         npx sequelize-cli db:migrate --env test
         npx sequelize-cli db:seed:all --env test
     - name: testing
       working-directory: project
       run: |
-        cd project
         npm run docker_test
       env:
         DOCKER_TEST_USER: postgres
