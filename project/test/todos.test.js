@@ -92,7 +92,7 @@ describe("Create, Update, and Delete", () => {
                     expect(data.title).toBe(`Title Test ${i}`);
                     expect(data.description).toBe(`Description Test ${i}`);
 
-                    console.log(`${i} created id: ${currentId}`);
+                    // console.log(`${i} created id: ${currentId}`);
 
                     //update
                     request(app)
@@ -106,7 +106,7 @@ describe("Create, Update, and Delete", () => {
 
                             expect(data.title).toBe(`Title Test Update ${i}`);
                             expect(data.description).toBe(`Description Test Update ${i}`);
-                            console.log(`${i} updated id: ${currentId}`);
+                            // console.log(`${i} updated id: ${currentId}`);
         
                             //delete
                             request(app)
@@ -120,7 +120,7 @@ describe("Create, Update, and Delete", () => {
                                     expect(data.title).toBe(`Title Test Update ${i}`);
                                     expect(data.description).toBe(`Description Test Update ${i}`);
                     
-                                    console.log(`${i} Deleted id: ${currentId}`);
+                                    // console.log(`${i} Deleted id: ${currentId}`);
                                     done()
                                 })
                                 .catch(done);
