@@ -57,9 +57,9 @@ jobs:
     - name: init DB
       working-directory: project
       run: |
-        npx sequelize-cli db:create --env test
-        npx sequelize-cli db:migrate --env test
-        npx sequelize-cli db:seed:all --env test
+        npx sequelize-cli db:create --env docker_test
+        npx sequelize-cli db:migrate --env docker_test
+        npx sequelize-cli db:seed:all --env docker_test
     - name: testing
       working-directory: project
       run: |
