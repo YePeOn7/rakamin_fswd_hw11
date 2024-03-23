@@ -46,17 +46,18 @@ jobs:
         node-version: ${{ matrix.node-version }}
         cache: 'npm'
     - run: npm ci
+      working-directory: project
     - run: npm run build --if-present
+      working-directory: project
     - name: init DB
+      working-directory: project
       run: |
-        cd project
         npx sequelize-cli db:create --env test
         npx sequelize-cli db:migrate --env test
         npx sequelize-cli db:seed:all --env test
     - name: testing
-      run: |
-        cd project
-        npm run docker_test
+      working-directory: project
+      run: npm run docker_test
       env:
         DOCKER_TEST_USER: postgres
         DOCKER_TEST_PASSWORD: postgres
