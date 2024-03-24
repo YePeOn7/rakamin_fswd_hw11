@@ -46,20 +46,26 @@ jobs:
       with:
         node-version: ${{ matrix.node-version }}
         cache: 'npm'
-        # cache-dependency-path: 'project/package-lock.json'
+        cache-dependency-path: 'project/package-lock.json'
     - name: Install Dependency
       run: npm ci
-      # working-directory: project
+      working-directory: project
     
     # - name: Build
     #   run: npm run build --if-present
       # working-directory: project
-    
+    - name: Print Env
+      run: |
+        echo ${NODE_ENV} 
+        echo ${DOCKER_TEST_USER} 
+        echo ${DOCKER_TEST_PASSWORD} 
+        echo ${DOCKER_TEST_HOST} 
+        echo ${DOCKER_TEST_DB} 
     - name: init DB
-      # working-directory: project
+      working-directory: project
       run: npm run docker_test
     - name: testing
-      # working-directory: project
+      working-directory: project
       run: npm run docker_test
       env:
         NODE_ENV: docker_test
