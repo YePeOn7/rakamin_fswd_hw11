@@ -65,7 +65,7 @@ jobs:
         NODE_ENV: docker_test
         DOCKER_TEST_USER: postgres
         DOCKER_TEST_PASSWORD: postgres
-        DOCKER_TEST_HOST: postgres
+        DOCKER_TEST_HOST: localhost
         DOCKER_TEST_DB: w11-test
     - name: init DB
       working-directory: project
@@ -78,7 +78,7 @@ jobs:
         NODE_ENV: docker_test
         DOCKER_TEST_USER: postgres
         DOCKER_TEST_PASSWORD: postgres
-        DOCKER_TEST_HOST: postgres
+        DOCKER_TEST_HOST: localhost
         DOCKER_TEST_DB: w11-test
     - name: testing
       working-directory: project
@@ -87,6 +87,6 @@ jobs:
         NODE_ENV: docker_test
         DOCKER_TEST_USER: postgres
         DOCKER_TEST_PASSWORD: postgres
-        DOCKER_TEST_HOST: postgres
+        DOCKER_TEST_HOST: localhost
         DOCKER_TEST_DB: w11-test
 
