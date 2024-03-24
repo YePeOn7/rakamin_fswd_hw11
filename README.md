@@ -43,5 +43,10 @@ sudo docker compose up -d
 sudo docker exec -it w11 sh
 
 # inside the docker container of w11
-
+npx sequelize-cli db:create --env docker
+npx sequelize-cli db:migrate --env docker
+npx sequelize-cli db:seed:all --env docker
 ```
+
+* The app service is available on PORT 3000
+* The db service is available on PORT 5433 on host mechine
