@@ -70,6 +70,12 @@ jobs:
     - name: init DB
       working-directory: project
       run: npm run docker_test
+      env:
+        NODE_ENV: docker_test
+        DOCKER_TEST_USER: postgres
+        DOCKER_TEST_PASSWORD: postgres
+        DOCKER_TEST_HOST: localhost
+        DOCKER_TEST_DB: w11-test
     - name: testing
       working-directory: project
       run: npm run docker_test
