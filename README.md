@@ -1,6 +1,6 @@
 # rakamin_fswd_hw11
 
-## For Development
+## Init For Development
 
 From root repo
 
@@ -16,7 +16,7 @@ npx sequelize-cli db:seed:all
 npm run dev
 ```
 
-## For Testing
+## Init For Testing
 
 From root repo
 
@@ -29,4 +29,19 @@ npx sequelize-cli db:seed:all --env test
 
 # run project
 npm run test
+```
+
+## Init with docker
+
+From root repo
+
+```bash
+cd project
+sudo docker compose up -d
+
+# enter docker console of w11 container
+sudo docker exec -it w11 sh
+
+# inside the docker container of w11
+
 ```
