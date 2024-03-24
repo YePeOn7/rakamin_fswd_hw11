@@ -12,7 +12,7 @@ app.get('/', (req, res) => {
 app.use(router);
 app.use(errorHandler);
 
-if(process.env.NODE_ENV != "test"){
+if(process.env.NODE_ENV != "test" && process.env.NODE_ENV != "docker_test" ){
   app.listen(port, () => {
     console.log(`Example app listening on port ${port}`)
   })

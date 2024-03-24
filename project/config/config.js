@@ -26,6 +26,15 @@ const config = {
     // logging: false,
     // port: 5433
   },
+  docker_test: {
+    username: process.env.DOCKER_TEST_USER,
+    password: process.env.DOCKER_TEST_PASSWORD,
+    database: process.env.DOCKER_TEST_DB,
+    host: process.env.DOCKER_TEST_HOST,
+    dialect: 'postgres',
+    logging: false,
+    // port: 5435
+  }
 };
 
 module.exports = config

@@ -16,8 +16,28 @@ jobs:
 
     strategy:
       matrix:
-        node-version: [14.x, 16.x, 18.x]
+        node-version: [21.x]
         # See supported Node.js release schedule at https://nodejs.org/en/about/releases/
+    
+    # Service containers to run with `runner-job`
+    services:
+      # Label used to access the service container
+      postgres:
+        # Docker Hub image
+        image: postgres
+        # Provide the password for postgres
+        env:
+          POSTGRES_USER: postgres
+          POSTGRES_PASSWORD: postgres
+        # Set health checks to wait until postgres has started
+        options: >-
+          --health-cmd pg_isready
+          --health-interval 10s
+          --health-timeout 5s
+          --health-retries 5
+        ports:
+          # Maps tcp port 5432 on service container to the host
+          - 5432:5432
 
     steps:
     - uses: actions/checkout@v3
@@ -26,6 +46,47 @@ jobs:
       with:
         node-version: ${{ matrix.node-version }}
         cache: 'npm'
-    - run: npm ci
-    - run: npm run build --if-present
-    - run: npm test
+        cache-dependency-path: 'project/package-lock.json'
+    - name: Install Dependency
+      run: npm ci
+      working-directory: project
+    
+    # - name: Build
+    #   run: npm run build --if-present
+      # working-directory: project
+    - name: Print Env
+      run: |
+        echo ${NODE_ENV} 
+        echo ${DOCKER_TEST_USER} 
+        echo ${DOCKER_TEST_PASSWORD} 
+        echo ${DOCKER_TEST_HOST} 
+        echo ${DOCKER_TEST_DB} 
+      env:
+        NODE_ENV: docker_test
+        DOCKER_TEST_USER: postgres
+        DOCKER_TEST_PASSWORD: postgres
+        DOCKER_TEST_HOST: localhost
+        DOCKER_TEST_DB: w11-test
+    - name: init DB
+      working-directory: project
+      run: |
+        npx sequelize-cli db:create
+        npx sequelize-cli db:migrate
+        npx sequelize-cli db:seed:all
+        
+      env:
+        NODE_ENV: docker_test
+        DOCKER_TEST_USER: postgres
+        DOCKER_TEST_PASSWORD: postgres
+        DOCKER_TEST_HOST: localhost
+        DOCKER_TEST_DB: w11-test
+    - name: testing
+      working-directory: project
+      run: npm run docker_test
+      env:
+        NODE_ENV: docker_test
+        DOCKER_TEST_USER: postgres
+        DOCKER_TEST_PASSWORD: postgres
+        DOCKER_TEST_HOST: localhost
+        DOCKER_TEST_DB: w11-test
+
