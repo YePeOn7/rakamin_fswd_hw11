@@ -46,7 +46,7 @@ jobs:
       with:
         node-version: ${{ matrix.node-version }}
         cache: 'npm'
-        cache-dependency-path: '**/package-lock.json'
+        cache-dependency-path: 'project/package-lock.json'
     - name: Install Dependency
       run: npm ci
       working-directory: project
@@ -66,6 +66,6 @@ jobs:
       env:
         DOCKER_TEST_USER: postgres
         DOCKER_TEST_PASSWORD: postgres
-        DOCKER_TEST_HOST: postgres
+        DOCKER_TEST_HOST: localhost
         DOCKER_TEST_DB: w11-test
 
