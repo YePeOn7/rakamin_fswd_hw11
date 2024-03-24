@@ -33,7 +33,7 @@ const config = {
     host: process.env.DOCKER_TEST_HOST,
     dialect: 'postgres',
     // logging: false,
-    // port: 5433
+    port: 5435
   }
 };
 
