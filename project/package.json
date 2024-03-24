@@ -7,7 +7,7 @@
     "dev": "nodemon app.js",
     "test": "jest --detectOpenHandles --runInBand --forceExit",
     "docker": "NODE_ENV=docker && export NODE_ENV && node ./app.js",
-    "docker_test":  "export NODE_ENV=docker_test && npx sequelize-cli db:create --env docker_test && npx sequelize-cli db:migrate --env docker_test && npx sequelize-cli db:seed:all --env docker_test && jest --detectOpenHandles --runInBand --forceExit"
+    "docker_test":  "export NODE_ENV=docker_test & jest --detectOpenHandles --runInBand --forceExit"
   },
   "keywords": [],
   "author": "",
