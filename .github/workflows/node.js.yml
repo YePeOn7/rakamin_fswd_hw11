@@ -56,11 +56,7 @@ jobs:
     
     - name: init DB
       working-directory: project
-      run: |
-        export NODE_ENV=docker_test
-        npx sequelize-cli db:create --env docker_test
-        npx sequelize-cli db:migrate --env docker_test
-        npx sequelize-cli db:seed:all --env docker_test
+      run: npm run docker_test
     - name: testing
       working-directory: project
       run: |
