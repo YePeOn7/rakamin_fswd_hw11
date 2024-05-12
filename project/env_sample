@@ -10,7 +10,7 @@ TEST_DB=
 
 DOCKER_PG_USER=
 DOCKER_PG_PASSWORD=
-DOCKER_PG_HOST=
+DOCKER_PG_HOST= #this should use use service name. not local host
 DOCKER_PG_DB=
 
 DOCKER_TEST_USER=
